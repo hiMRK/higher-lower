@@ -4,7 +4,7 @@ import './app.scss';
 
 const App = () => {
   const [randomNumber, setRandomNumber] = useState('🤠');
-  const [userChoice, setUserChoice] = useState('🤖');
+  const [userChoice, setUserChoice] = useState('');
   const getRandomNumber = (e) => {
     setRandomNumber(random(1, 20));
     (e.target.id === 'higher') ? setUserChoice('higher') : setUserChoice('lower');
@@ -16,7 +16,7 @@ const App = () => {
     useEffect(() => {
       REF.current = value;
     });
-    return REF.current;
+    console.log(REF.current);
   };
   const prevNumber = usePrevious(randomNumber);
 
