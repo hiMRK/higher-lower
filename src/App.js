@@ -3,8 +3,8 @@ import { random } from 'underscore';
 import './app.scss';
 
 const App = () => {
-  const [randomNumber, setRandomNumber] = useState('');
-  const [userChoice, setUserChoice] = useState('');
+  const [randomNumber, setRandomNumber] = useState('🤠');
+  const [userChoice, setUserChoice] = useState('🤖');
   const getRandomNumber = (e) => {
     setRandomNumber(random(1, 20));
     (e.target.id === 'higher') ? setUserChoice('higher') : setUserChoice('lower');
