@@ -1,0 +1,93 @@
+$primary: #448AFF;
+$win: #00C853;
+$lost: #FF1744;
+$draw: #FF3D00;
+
+.game {
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  &__result {
+    font-size: 30px;
+    margin: 50px 0 25px;
+    .result {
+      &--win {
+        color: $win;
+      }
+      &--lost {
+        color: $lost;
+      }
+      &--draw {
+        color: $draw;
+      }
+    }
+    > p {
+      margin: 0;
+    }
+  }
+  &__choice {
+    text-transform: capitalize;
+    font-size: 25px;
+    margin: 0 0 50px;
+    .choice--highlighted {
+      color: $primary;
+    }
+  }
+  &__card-wrapper {
+    display: flex;
+  }
+  &__controls {
+    .controls {
+      &-btn {
+        padding: 20px 40px;
+        margin: 0 25px;
+        border: none;
+        outline: none;
+        border-radius: 999px;
+        font-size: 25px;
+        font-family: 'Poppins', sans-serif;
+        background: $primary;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.25s ease;
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 
+          0 5px 5px -15px rgba($primary, 0.3), 
+          0 10px 10px -15px rgba($primary, 0.3),
+          0 20px 20px -15px rgba($primary, 0.3), 
+          0 40px 40px -15px rgba($primary, 0.3), 
+          0 50px 50px -20px rgba($primary, 0.3)
+        }
+      }
+    }
+  }
+}
+
+// Cards
+.card {
+  font-size: 60px;
+  height: 300px;
+  width: 200px;
+  background: #fff;
+  color: $primary;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 25px;
+  position: relative;
+  &__title {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 20px;
+    color: #222;
+  }
+}
