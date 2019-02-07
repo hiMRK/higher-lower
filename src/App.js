@@ -3,7 +3,7 @@ import { random } from 'underscore';
 import './app.scss';
 
 const App = () => {
-  const [randomNumber, setRandomNumber] = useState('🤠');
+  const [randomNumber, setRandomNumber] = useState('');
   const [userChoice, setUserChoice] = useState('');
   const getRandomNumber = (e) => {
     setRandomNumber(random(1, 20));
@@ -16,7 +16,7 @@ const App = () => {
     useEffect(() => {
       REF.current = value;
     });
-    console.log(REF.current);
+    return REF.current;
   };
   const prevNumber = usePrevious(randomNumber);
 
@@ -24,11 +24,11 @@ const App = () => {
     <div class='game game-wrapper'>
       <div class='game__card-wrapper'>
         <div className='card'>
-          <p className='card__title'>{randomNumber}</p>
+          <p className='card__title'>{(randomNumber) ? randomNumber : '🤠'}</p>
           <p className='card__status'>New</p>
         </div>
         <div className='card'>
-        <p className='card__title'>{prevNumber}</p>
+        <p className='card__title'>{(prevNumber ? prevNumber : '🤖')}</p>
           <p className='card__status'>Old</p>
         </div> 
       </div>
