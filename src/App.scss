@@ -70,8 +70,6 @@ $draw: #FF3D00;
 
 // Cards
 .card {
-  font-size: 60px;
-  font-weight: 900;
   height: 300px;
   width: 200px;
   background: #fff;
@@ -83,6 +81,10 @@ $draw: #FF3D00;
   margin: 0 25px;
   position: relative;
   &__title {
+    font-size: 60px;
+    font-weight: 900;
+  }
+  &__status {
     position: absolute;
     bottom: 20px;
     left: 50%;

@@ -24,27 +24,13 @@ const App = () => {
     <div class='game game-wrapper'>
       <div class='game__card-wrapper'>
         <div className='card'>
-          {randomNumber}
-          <p className='card__title'>New</p>
+          <p className='card__title'>{randomNumber}</p>
+          <p className='card__status'>New</p>
         </div>
         <div className='card'>
-          {prevNumber}
-          <p className='card__title'>Old</p>
+        <p className='card__title'>{prevNumber}</p>
+          <p className='card__status'>Old</p>
         </div> 
-        {/* {
-          randomNumber &&
-            <div className='card'>
-              <p className='card__title'>New</p>
-              {randomNumber}
-            </div>
-        } */}
-        {/* {
-          prevNumber && 
-            <div className='card'>
-              <p className='card__title'>Old</p>
-              {prevNumber}
-            </div> 
-        } */}
       </div>
       <div className='game__result'>
         { prevNumber && (
